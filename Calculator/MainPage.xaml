@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calc.MainPage">
+
+    <ScrollView>
+        <Grid
+            RowDefinitions="Auto, *, *, *, *, *, * "
+            ColumnDefinitions="*, *, *, *"
+            Padding="10"
+            ColumnSpacing="3"
+            RowSpacing="2"
+            >
+            <Entry
+                x:Name="EntryCalculations"
+                Grid.Row="0"
+                Grid.ColumnSpan="4"
+                IsReadOnly="True"/>
+
+            <Entry
+                x:Name="EntryResult"
+                Grid.Row="1"
+                Grid.ColumnSpan="4"
+                IsReadOnly="True"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Text="%"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="CE"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="C"/>
+            <Button Grid.Row="2" Grid.Column="3" Text="Del"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Text="7"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="8"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="9"/>
+            <Button Grid.Row="3" Grid.Column="3" Text="x"/>
+
+            <Button Grid.Row="4" Grid.Column="0" Text="4"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="5"/>
+            <Button Grid.Row="4" Grid.Column="2" Text="6"/>
+            <Button Grid.Row="4" Grid.Column="3" Text="-"/>
+
+            <Button Grid.Row="5" Grid.Column="0" Text="1" Clicked="OnPercentClicked"/>
+            <Button Grid.Row="5" Grid.Column="1" Text="2" Clicked="OnPercentClicked"/>
+            <Button Grid.Row="5" Grid.Column="2" Text="3" Clicked="OnPercentClicked"/>
+            <Button Grid.Row="5" Grid.Column="3" Text="+" Clicked="Operatorbuttons"/>
+
+            <Button Grid.Row="6" Grid.Column="0" Text="+/-"/>
+            <Button Grid.Row="6" Grid.Column="1" Text="0" Clicked="Operatorbuttons"/>
+            <Button Grid.Row="6" Grid.Column="2" Text="."/>
+            <Button Grid.Row="6" Grid.Column="3" Text="="/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
